@@ -1,0 +1,91 @@
+#yearPageContainer {
+    min-height: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ 
+
+.yearCalendar {
+    display: none;
+    width: 443px;
+    position: fixed;
+    bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 24px;
+    background: var(--black, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #000);
+    color: #fff;
+    padding: 14px 14px 70px 14px;
+}
+
+.yearCalendar table {
+    width: 443px;
+}
+
+.yearCalendar table tr>td {
+    width: 40px;
+    text-align: center;
+    padding: 6px 12px;
+    border: 1px solid var(--black, #000);
+    border-radius: 16px;
+    color: var(--white-tint-80, rgba(255, 255, 255, 0.80));
+    font-feature-settings: 'clig' off, 'liga' off;
+    /* body-book */
+    /* font-family: Meta Pro; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 24px; /* 150% */
+}
+
+.yearCalendar table tr>td:hover {
+    border-radius: 16px;
+    border: 1px solid var(--white, #FFF);
+    background-color: #FFF;
+    color: var(--black, #000);
+    cursor: pointer;
+}
+
+.yearCalendarShow {
+    display: block;
+    position: absolute;
+}
+
+.jumpToYearBtn {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border: none;
+    border-radius: var(--X-Small, 24px);
+    font-size: 16px;
+    background: var(--black, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #000);
+    padding: 12px 24px;
+    color: var(--black,#fff);
+}
+
+.jumpToYearBtn::after {
+
+    content: "";
+    background-image: url("../images/jump-to-year-arrow-up.png");
+    margin-left: 16px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-position: 0px 3px;
+    background-repeat: no-repeat;
+}
+
+.jumpToYearBtnOpen::after {
+    content: "";
+    background-image: url("../images/jump-to-year-arrow-down.png");
+    width: 16px;
+    background-repeat: no-repeat;
+    background-position: 2px 0px;
+    height: 16px;
+    margin-left: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.jumpToYearBtn:hover {
+    cursor: pointer;
+}
